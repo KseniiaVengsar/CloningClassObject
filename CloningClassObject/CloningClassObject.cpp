@@ -1,5 +1,5 @@
 // CloningClassObject.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//В этом задании нужно написать функцию clone для класса трёхдиагональной матрицы, которая возвращает std::unique_ptr. Код класса трёхдиагональной матрицы ниже:
+//Р’ СЌС‚РѕРј Р·Р°РґР°РЅРёРё РЅСѓР¶РЅРѕ РЅР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ clone РґР»СЏ РєР»Р°СЃСЃР° С‚СЂС‘С…РґРёР°РіРѕРЅР°Р»СЊРЅРѕР№ РјР°С‚СЂРёС†С‹, РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ std::unique_ptr. РљРѕРґ РєР»Р°СЃСЃР° С‚СЂС‘С…РґРёР°РіРѕРЅР°Р»СЊРЅРѕР№ РјР°С‚СЂРёС†С‹ РЅРёР¶Рµ:
 
 #include <iostream>
 #include <vector>
@@ -19,8 +19,8 @@ public:
     {};
     ~tridiagonal_matrix() { std::cout << "destructor called\n"; }
 
-  //используем std::make_unique для создания нового экземпляра класса// передаём текущие значения векторов в конструктор копирования
-    /*std::unique_ptr<tridiagonal_matrix>*/auto clone() const { //можно использ auto
+  //РёСЃРїРѕР»СЊР·СѓРµРј std::make_unique РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР°// РїРµСЂРµРґР°С‘Рј С‚РµРєСѓС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ РІРµРєС‚РѕСЂРѕРІ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+    /*std::unique_ptr<tridiagonal_matrix>*/auto clone() const { //РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР· auto
         return std::make_unique<tridiagonal_matrix>(*this);
     }
 };
